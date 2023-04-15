@@ -11,7 +11,13 @@ namespace StarterAssets
 #endif
 	public class FirstPersonController : MonoBehaviour
 	{
-		private float jumpHeightMultiplier = 1f;
+		public float jumpHeightMultiplier = 1f;
+
+   		// Add a public property to expose the jumpHeightMultiplier variable
+    	public float JumpHeightMultiplier
+    	{
+        	get { return jumpHeightMultiplier; }
+    	}
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 4.0f;

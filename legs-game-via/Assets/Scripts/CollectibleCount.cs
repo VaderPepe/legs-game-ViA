@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class CollectibleCount : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class CollectibleCount : MonoBehaviour
     {
         count++;
         UpdateCount();
-        FindObjectOfType<FirstPersonController>().jumpHeightMultiplier += 0.1f;
+        FindObjectOfType<FirstPersonController>().jumpHeightMultiplier += 0.5f;
     }
 
     void UpdateCount()
