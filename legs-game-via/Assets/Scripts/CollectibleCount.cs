@@ -24,7 +24,7 @@ public class CollectibleCount : MonoBehaviour
     {
         count++;
         UpdateCount();
-        FindObjectOfType<FirstPersonController>().jumpHeightMultiplier += 0.5f;
+        Collect.eatingAnimationCount++;
     }
 
     void UpdateCount()

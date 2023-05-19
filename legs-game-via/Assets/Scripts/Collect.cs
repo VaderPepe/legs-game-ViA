@@ -7,8 +7,20 @@ public class Collect : MonoBehaviour
 {
     public static event Action OnCollected;
     public static int total;
+    public static int eatingAnimationCount;
 
-    void Awake() => total++;
+    //private AudioSource audioSource;
+
+    void Awake()
+    {
+        total++;
+    }
+
+    // private void Start()
+    // {
+    //     audioSource = FindObjectOfType<AudioSource>();
+    // }
+
     // Update is called once per frame
     void Update()
     {
@@ -19,6 +31,7 @@ public class Collect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            //audioSource.Play();
             OnCollected?.Invoke();
             Destroy(gameObject);
         }
